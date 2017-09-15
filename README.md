@@ -44,5 +44,24 @@ Responses to requests to your API server should be in JSON format and at minimum
 - DELETE `/card/:cardId`
   - Description: Should delete the list associated with the specified listId
 
+To clear things up a bit, consider the following example:
+- Backend datastore is a JSON file that looks like:
+  - ```
+    {
+      lists: {
+        "1234": {
+          "title": "Grocery List"
+        }
+      }
+      "cards": {
+        "5234": {
+          "title": "Eggs",
+          "description": "Buy many eggs"
+        }
+      }
+    }
+    ```
+- User sents GET `/list/123`
+
 ## Part 2: Data form
 Build an HTML form that enables form users to add cards and add lists. You can use this form to test your API server.
