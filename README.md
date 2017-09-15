@@ -48,64 +48,63 @@ Responses to requests to your API server should be in JSON format and at minimum
 
 To clear things up a bit, consider the following example:
 - Our data in the backend might look like this:
+  Lists
+  <table>
+    <tr>
+      <th>
+        Id
+      </th>
+      <th>
+        Title
+      </th>
+      <th>
+        Order
+      </th>
+    </tr>
+    <tr>
+      <td>
+        1234
+      </td>
+      <td>
+        "Grocery List"
+      </td>
+      <td>
+        1
+      </td>
+    </tr>
+  </table>
 
-Lists
-<table>
-  <tr>
-    <th>
-      Id
-    </th>
-    <th>
-      Title
-    </th>
-    <th>
-      Order
-    </th>
-  </tr>
-  <tr>
-    <td>
-      1234
-    </td>
-    <td>
-      "Grocery List"
-    </td>
-    <td>
-      1
-    </td>
-  </tr>
-</table>
-
-Cards
-<table>
-  <tr>
-    <th>
-      Id
-    </th>
-    <th>
-      Title
-    </th>
-    <th>
-      Description
-    </th>
-    <th>
-      ListId
-    </th>
-  </tr>
-  <tr>
-    <td>
-      5332
-    </td>
-    <td>
-      "Eggs"
-    </td>
-    <td>
-      "Need to buy a lot of eggs"
-    </td>
-    <td>
-      1234
-    </td>
-  </tr>
-</table>
+  Cards
+  <table>
+    <tr>
+      <th>
+        Id
+      </th>
+      <th>
+        Title
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        ListId
+      </th>
+    </tr>
+    <tr>
+      <td>
+        5332
+      </td>
+      <td>
+        "Eggs"
+      </td>
+      <td>
+        "Need to buy a lot of eggs"
+      </td>
+      <td>
+        1234
+      </td>
+    </tr>
+  </table>
 
 - User sends GET `/list/1234`
 - Assuming the request is well-formed, the user receives the following response:
@@ -116,6 +115,53 @@ Cards
     order: 1
   }
   ```
+- User sends POST `/card` with params: {listId: 1234, title: "Milk", description: "Go Buy Milk"}
+- Cards data now looks like:
+  Cards
+  <table>
+    <tr>
+      <th>
+        Id
+      </th>
+      <th>
+        Title
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        ListId
+      </th>
+    </tr>
+    <tr>
+      <td>
+        5332
+      </td>
+      <td>
+        "Eggs"
+      </td>
+      <td>
+        "Need to buy a lot of eggs"
+      </td>
+      <td>
+        1234
+      </td>
+    </tr>
+    <tr>
+      <td>
+        5333
+      </td>
+      <td>
+        "Milk"
+      </td>
+      <td>
+        "Go Buy Milk"
+      </td>
+      <td>
+        1234
+      </td>
+    </tr>
+  </table>
 
 ## Part 2: Data form
 Build an HTML form that enables form users to add cards and add lists. You can use this form to test your API server. We are not concerned with the aesthetics of the form. We just care that it is functional.
