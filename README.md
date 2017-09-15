@@ -27,6 +27,8 @@ First, take a look at the structure for the data we'd like you to assume. You ma
 Build an API server that has the following routes. 
 You must store data necessary for this API server in a database. You are free to use any database that you prefer.
 Responses to requests to your API server should be in JSON format and at minimum contain a status code.
+
+- *Adding a card*: Should add a card to the database with the given title and description. The card should be associated with the list with the provided listId.
 <table>
   <tbody>
     <tr>
@@ -51,6 +53,8 @@ Responses to requests to your API server should be in JSON format and at minimum
   </tbody>
 <table>
 
+- *Adding a list*: Should add a list to the database with the given title. The newly added list's order
+
 <table>
   <tbody>
     <tr>
@@ -72,6 +76,8 @@ Responses to requests to your API server should be in JSON format and at minimum
     </tr>
   </tbody>
 </table>
+
+- *Changing the order of a list*: Should update the list with the provided listId. Should update only the fields provided in the querystring.
 
 <table>
   <tbody>
@@ -95,10 +101,12 @@ Responses to requests to your API server should be in JSON format and at minimum
           <li><code>title</code>: the title of the list</li>
           <li><code>order</code>: the new place of the list (when changing order of the lists)<br>No two lists should have the same order.</li>
         </ul>
-      <td>
+      </td>
     </tr>
   </tbody>
 </table>
+
+- *Get card by ID*: Should get title, description, and listId from the card associated with the specified cardId.
 
 <table>
   <tbody>
@@ -122,24 +130,79 @@ Responses to requests to your API server should be in JSON format and at minimum
   </tbody>
 </table>
 
+- *Get list by ID*: Should get title and order from the list associated with the specified listId.
 
-- POST `/card`
-  - Description: Should add a card to the database with the given title and description. The card should be associated with the list with the provided listId.
-  - params: listId, title, description
-- POST `/list`
-  - Description: Should add a list to the database with the given title. The newly added list's order 
-  - params: title
-- POST `/editlist/:listId`
-  - Description: Should update the list with the provided listId. Should update only the fields provided in the querystring.
-  - params: title, order
-- GET `/card/:cardId`
-  - Description: Should get title, description, and listId from the card associated with the specified cardId
-- GET `/list/:listId`
-  - Description: Should get title and order from the list associated with the specified listId
-- DELETE `/list/:listId`
-  - Description: Should delete the list associated with the specified listId
-- DELETE `/card/:cardId`
-  - Description: Should delete the list associated with the specified listId
+<table>
+  <tbody>
+    <tr>
+      <td>URL</td>
+      <td><code>/list/:listId</code></td>
+    </tr>
+    <tr>
+      <td>HTTP Method</td>
+      <td>GET</td>
+    </tr>
+    <tr>
+      <td>Parameters</td>
+      <td>
+        URL Parameters:
+        <ul>
+          <li><code>listId</code>: the ID of the desired list</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+- *Delete card by ID*: Should delete the list associated with the specified listId.
+
+<table>
+  <tbody>
+    <tr>
+      <td>URL</td>
+      <td><code>/card/:cardId</code></td>
+    </tr>
+    <tr>
+      <td>HTTP Method</td>
+      <td>DELETE</td>
+    </tr>
+    <tr>
+      <td>Parameters</td>
+      <td>
+        URL Parameters:
+        <ul>
+          <li><code>cardId</code>: the ID of the desired card</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+- *Delete list by ID*: Should delete the list associated with the specified listId.
+
+<table>
+  <tbody>
+    <tr>
+      <td>URL</td>
+      <td><code>/list/:listId</code></td>
+    </tr>
+    <tr>
+      <td>HTTP Method</td>
+      <td>DELETE</td>
+    </tr>
+    <tr>
+      <td>Parameters</td>
+      <td>
+        URL Parameters:
+        <ul>
+          <li><code>listId</code>: the ID of the desired list</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
 
 To clear things up a bit, consider the following example:
 - Our data in the backend might look like this:
