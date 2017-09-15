@@ -29,15 +29,15 @@ You must store data necessary for this API server in a database. You are free to
 Responses to requests to your API server should be in JSON format and at minimum contain a status code.
 
 - POST `/card`
-  - Description: Should add a card to the datastore with the given title and description. The card should be associated with the list with the provided listId.
+  - Description: Should add a card to the database with the given title and description. The card should be associated with the list with the provided listId.
   - params: listId, title, description
 - POST `/list`
-  - Description: Should add a list to the datastore with the given title. The newly added list's order 
+  - Description: Should add a list to the database with the given title. The newly added list's order 
   - params: title
 - POST `/editlist/:listId`
   - Description: Should update the list with the provided listId. Should update only the fields provided in the querystring.
   - params: title, order
-- GET `/card/:cardid`
+- GET `/card/:cardId`
   - Description: Should get title, description, and listId from the card associated with the specified cardId
 - GET `/list/:listId`
   - Description: Should get title and order from the list associated with the specified listId
@@ -64,7 +64,7 @@ To clear things up a bit, consider the following example:
       }
     }
     ```
-- User sents GET `/list/1234`
+- User sendsd GET `/list/1234`
 - Assuming the request is well-formed, the user receives the following response:
   ```
   {
@@ -75,10 +75,10 @@ To clear things up a bit, consider the following example:
   ```
 
 ## Part 2: Data form
-Build an HTML form that enables form users to add cards and add lists. You can use this form to test your API server.
+Build an HTML form that enables form users to add cards and add lists. You can use this form to test your API server. We are not concerned with the aesthetics of the form. We just care that it is functional.
 
-## Part 3: Submitting
+## Submitting
 1. Clone this repository
 2. Checkout a branch structured as yourfirstname_yourlastname
 3. Push all of your commits to your branch.
-4. Ask us questions about this process if you feel confused. We'll walk you through it - don't sweat!
+4. If you have any questions, confusions, or comments at all, feel SUPER FREE to email us at `niharp@seas.upenn.edu`, `rohanmen@seas.upenn.edu`, or `branlin@seas.upenn.edu`. We're here to help 😁. We'll help you through it - don't sweat!
