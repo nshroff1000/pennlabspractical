@@ -48,6 +48,7 @@ Responses to requests to your API server should be in JSON format and at minimum
 
 To clear things up a bit, consider the following example:
 - Our data in the backend might look like this:
+
   Lists
   <table>
     <tr>
@@ -70,6 +71,17 @@ To clear things up a bit, consider the following example:
       </td>
       <td>
         1
+      </td>
+    </tr>
+    <tr>
+      <td>
+        1235
+      </td>
+      <td>
+        "School Supplies"
+      </td>
+      <td>
+        2
       </td>
     </tr>
   </table>
@@ -117,6 +129,7 @@ To clear things up a bit, consider the following example:
   ```
 - User sends POST `/card` with params: {listId: 1234, title: "Milk", description: "Go Buy Milk"}
 - Cards data now looks like:
+
   Cards
   <table>
     <tr>
