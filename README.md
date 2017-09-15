@@ -27,6 +27,80 @@ First, take a look at the structure for the data we'd like you to assume. You ma
 Build an API server that has the following routes. 
 You must store data necessary for this API server in a database. You are free to use any database that you prefer.
 Responses to requests to your API server should be in JSON format and at minimum contain a status code.
+<table>
+  <tbody>
+    <tr>
+      <td>URL</td>
+      <td>`/card`</td>
+    </tr>
+    <tr>
+      <td>HTTP Method</td>
+      <td>POST</td>
+    </tr>
+    <tr>
+      <td>Parameters</td>
+      <td>
+        Post Form Parameters:
+        <ul>
+          <li>`listId`: the ID of the list</li>
+          <li>`title`: the title of the list</li>
+          <li>`description`: the list description</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+<table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>URL</td>
+      <td>`/list`</td>
+    </tr>
+    <tr>
+      <td>HTTP Method</td>
+      <td>POST</td>
+    </tr>
+    <tr>
+      <td>Parameters</td>
+      <td>
+        Post Form Parameters:
+        <ul>
+          <li>`title`: the title of the list</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>URL</td>
+      <td>`/editlist/:listId`</td>
+    </tr>
+    <tr>
+      <td>HTTP Method</td>
+      <td>POST</td>
+    </tr>
+    <tr>
+      <td>Parameters</td>
+      <td>
+        URL Parameters:
+        <ul>
+          <li>`listId`: the ID of the list to be updated</li>
+        </ul>
+        Post Form Parameters:
+        <ul>
+          <li>`title`: the title of the list</li>
+          <li>`order`: the new place of the list (when changing order of the lists)<br>No two lists should have the same order.</li>
+        </ul>
+      <td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 - POST `/card`
   - Description: Should add a card to the database with the given title and description. The card should be associated with the list with the provided listId.
