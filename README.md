@@ -31,7 +31,7 @@ Responses to requests to your API server should be in JSON format and at minimum
   <tbody>
     <tr>
       <td>URL</td>
-      <td>`/card`</td>
+      <td><code>/card</code></td>
     </tr>
     <tr>
       <td>HTTP Method</td>
@@ -42,9 +42,9 @@ Responses to requests to your API server should be in JSON format and at minimum
       <td>
         Post Form Parameters:
         <ul>
-          <li>`listId`: the ID of the list</li>
-          <li>`title`: the title of the list</li>
-          <li>`description`: the list description</li>
+          <li><code>listId</code>: the ID of the list</li>
+          <li><code>title</code>: the title of the list</li>
+          <li><code>description</code>: the list description</li>
         </ul>
       </td>
     </tr>
@@ -55,7 +55,7 @@ Responses to requests to your API server should be in JSON format and at minimum
   <tbody>
     <tr>
       <td>URL</td>
-      <td>`/list`</td>
+      <td><code>/list</code></td>
     </tr>
     <tr>
       <td>HTTP Method</td>
@@ -66,7 +66,7 @@ Responses to requests to your API server should be in JSON format and at minimum
       <td>
         Post Form Parameters:
         <ul>
-          <li>`title`: the title of the list</li>
+          <li><code>title</code>: the title of the list</li>
         </ul>
       </td>
     </tr>
@@ -77,7 +77,7 @@ Responses to requests to your API server should be in JSON format and at minimum
   <tbody>
     <tr>
       <td>URL</td>
-      <td>`/editlist/:listId`</td>
+      <td><code>/editlist/:listId</code></td>
     </tr>
     <tr>
       <td>HTTP Method</td>
@@ -88,18 +88,39 @@ Responses to requests to your API server should be in JSON format and at minimum
       <td>
         URL Parameters:
         <ul>
-          <li>`listId`: the ID of the list to be updated</li>
+          <li><code>listId</code>: the ID of the list to be updated</li>
         </ul>
         Post Form Parameters:
         <ul>
-          <li>`title`: the title of the list</li>
-          <li>`order`: the new place of the list (when changing order of the lists)<br>No two lists should have the same order.</li>
+          <li><code>title</code>: the title of the list</li>
+          <li><code>order</code>: the new place of the list (when changing order of the lists)<br>No two lists should have the same order.</li>
         </ul>
       <td>
     </tr>
   </tbody>
 </table>
 
+<table>
+  <tbody>
+    <tr>
+      <td>URL</td>
+      <td><code>/card/:cardId</code></td>
+    </tr>
+    <tr>
+      <td>HTTP Method</td>
+      <td>GET</td>
+    </tr>
+    <tr>
+      <td>Parameters</td>
+      <td>
+        URL Parameters:
+        <ul>
+          <li><code>cardId</code>: the ID of the desired card</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 
 - POST `/card`
