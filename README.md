@@ -4,6 +4,8 @@ that has 3 major functional components: Boards, Lists, and Cards. Each Board can
 Each card generally represents an individual task that users can manage. Each list is generally a list of tasks. We encourage you to play 
 around with the tool ![here](http://www.trello.com).
 
+As general tips, make sure to comment your code. Feel free to use credible third party libraries or packages. Feel free to add your own spicy feautres, as long as they don't disturb the core functionality of the API server.
+
 There are two parts to this assignment. 
 
 
@@ -12,13 +14,13 @@ There are two parts to this assignment.
 First, take a look at the structure for the data we'd like you to assume:
 ### Structure of data
 - Card
-  - Title: `String`
-  - Description: `String`
+  - title: `String`
+  - description: `String`
   - listId: `Number`
   - id: `Number`
 - List
-  - Title: `String`
-  - Order: `Number`
+  - title: `String`
+  - order: `Number`
   - id: `Number`
 
 Build an API server that has the following routes. 
@@ -46,11 +48,12 @@ Responses to requests to your API server should be in JSON format and at minimum
 
 To clear things up a bit, consider the following example:
 - Backend datastore is a JSON file that looks like:
-  - ```
+  ```
     {
       lists: {
         "1234": {
-          "title": "Grocery List"
+          "title": "Grocery List",
+          "order": 1
         }
       }
       "cards": {
@@ -61,7 +64,15 @@ To clear things up a bit, consider the following example:
       }
     }
     ```
-- User sents GET `/list/123`
+- User sents GET `/list/1234`
+- Assuming the request is well-formed, the user receives the following response:
+  ```
+  {
+    status: 200,
+    title: "Grocery List",
+    order: 1
+  }
+  ```
 
 ## Part 2: Data form
 Build an HTML form that enables form users to add cards and add lists. You can use this form to test your API server.
