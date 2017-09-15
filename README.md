@@ -9,36 +9,39 @@ There are two parts to this assignment.
 
 ## Part 1: API Server
 
-Firstly, take a look at the structure for the data we'd like you to assume:
+First, take a look at the structure for the data we'd like you to assume:
 ### Structure of data
 - Card
-  - Title: String
-  - Description: String
-  - listId: Number
-  - id: Number
+  - Title: `String`
+  - Description: `String`
+  - listId: `Number`
+  - id: `Number`
 - List
-  - Title: String
-  - Order: Number
-  - id: Number
+  - Title: `String`
+  - Order: `Number`
+  - id: `Number`
 
-Build an API server that has the following routes. You are free to use any datastore that you prefer (i.e: some database or a json/yaml file etc.)
-- POST /card
+Build an API server that has the following routes. 
+You are free to use any datastore that you prefer (i.e: some database or a json/yaml file etc.). 
+You may assume that there is only one board to work with (you need not worry about associating lists with boards or cards with boards).
+Responses to requests to your API server should be in JSON format and at minimum contain a status code.
+
+- POST `/card`
   - Description: Should add a card to the datastore with the given title and description. The card should be associated with the list with the provided listId.
   - params: listId, title, description
-- POST /list
+- POST `/list`
   - Description: Should add a list to the datastore with the given title. The newly added list's order 
   - params: title
-- POST /editlist
+- POST `/editlist/:listId`
   - Description: Should update the list with the provided listId. Should update only the fields provided in the querystring.
-  - params: listId
-  - querystring: title, order
-- GET /card/:cardid
+  - params: title, order
+- GET `/card/:cardid`
   - Description: Should get title, description, and listId from the card associated with the specified cardId
-- GET /list/:listId
+- GET `/list/:listId`
   - Description: Should get title and order from the list associated with the specified listId
-- DELETE /listId
+- DELETE `/list/:listId`
   - Description: Should delete the list associated with the specified listId
-- DELETE /cardId
+- DELETE `/card/:cardId`
   - Description: Should delete the list associated with the specified listId
 
 ## Part 2: Data form
