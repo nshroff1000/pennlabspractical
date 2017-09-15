@@ -1,10 +1,10 @@
 # Penn Labs: Backend Technical Project
 Let's build an API server for Trello! If you're not familiar with Trello, it's not a problem. Trello is a task-management tool
 that has 3 major functional components: Boards, Lists, and Cards. Each Board can contain many lists, which in turn can contain many cards. 
-Each card generally represents an individual task that users can manage. Each list is generally a list of tasks. We encourage you to play 
-around with the tool [here](http://www.trello.com).
+Each card generally represents an individual task that users can manage. Each list is a group of related tasks. We encourage you to play 
+around with the tool [here](http://www.trello.com). A Board is a something that you might use to organize all of your tasks for one facet of your life. For example, we might have a board for School. In the School board, you might have a list for each class that you are taking. Within each list, you might have cards that represent homework assignments, tests, or projects. 
 
-As general tips, make sure to comment your code. Feel free to use credible third party libraries or packages. Feel free to add your own spicy feautres, as long as they don't disturb the core functionality of the API server.
+As a general tip, make sure to comment your code. Feel free to use credible third party libraries or packages. Feel free to add your own spicy features, as long as they don't disturb the core functionality of the API server.
 
 There are two parts to this assignment. 
 
@@ -47,7 +47,7 @@ Responses to requests to your API server should be in JSON format and at minimum
   - Description: Should delete the list associated with the specified listId
 
 To clear things up a bit, consider the following example:
-- Backend datastore is a JSON file that looks like:
+- Backend datastore may be a JSON file that looks like:
   ```
     {
       lists: {
