@@ -1,4 +1,4 @@
-# PennLabs Backend Technical Project
+# Penn Lab Backend Technical Project
 Let's build an API server for Trello! If you're not familiar with Trello, it's not a problem. Trello is a task-management tool
 that has 3 major functional components: Boards, Lists, and Cards. Each Board can contain many lists, which in turn can contain many cards. 
 Each card generally represents an individual task that users can manage. Each list is generally a list of tasks. We encourage you to play 
@@ -33,14 +33,12 @@ Build an API server that has the following routes. You are free to use any datas
   - params: listId
   - querystring: title, order
 - GET /card/:cardid
-  - Description: Should get title, description, and listId for the 
+  - Description: Should get title, description, and listId from the card associated with the specified cardId
 - GET /list/:listId
-  - Description: 
-- GET /stats
-  - Description: 
-- DELETE /listid
-  - Description: 
-- DELETE /cardid
-  - query string: 
+  - Description: Should get title and order from the list associated with the specified listId
+- DELETE /listId
+  - Description: Should delete the list associated with the specified listId
+- DELETE /cardId
+  - Description: Should delete the list associated with the specified listId
 
 ## Part 2: Data form
