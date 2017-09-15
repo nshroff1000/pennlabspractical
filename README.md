@@ -6,8 +6,9 @@ around with the tool [here](http://www.trello.com). A Board is a something that 
 
 As a general tip, make sure to comment your code. Feel free to use credible third party libraries or packages. As a bonus, feel free to add your own spicy features, as long as they don't disturb the core functionality of the API server.
 
-There are two parts to this assignment. 
+As a final note, it's not the end of the world if you don't finish this assignment! We are looking for quality code and people who are enthusiastic about programming. 😀
 
+Let's begin! There are two parts to this assignment. 
 
 ## Part 1: API Server
 First, take a look at the structure for the data we'd like you to assume. You may assume that your entire application deals with one board. Thus, you only need to deal with lists and cards.
