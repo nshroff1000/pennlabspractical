@@ -2,7 +2,7 @@
 Let's build an API server for Trello! If you're not familiar with Trello, it's not a problem. Trello is a task-management tool
 that has 3 major functional components: Boards, Lists, and Cards. Each Board can contain many lists, which in turn can contain many cards. 
 Each card generally represents an individual task that users can manage. Each list is generally a list of tasks. We encourage you to play 
-around with the tool ![here](http://www.trello.com).
+around with the tool [here](http://www.trello.com).
 
 As general tips, make sure to comment your code. Feel free to use credible third party libraries or packages. Feel free to add your own spicy feautres, as long as they don't disturb the core functionality of the API server.
 
