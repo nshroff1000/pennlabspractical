@@ -1,4 +1,4 @@
-# Penn Lab Backend Technical Project
+# Penn Labs: Backend Technical Project
 Let's build an API server for Trello! If you're not familiar with Trello, it's not a problem. Trello is a task-management tool
 that has 3 major functional components: Boards, Lists, and Cards. Each Board can contain many lists, which in turn can contain many cards. 
 Each card generally represents an individual task that users can manage. Each list is generally a list of tasks. We encourage you to play 
@@ -42,3 +42,4 @@ Build an API server that has the following routes. You are free to use any datas
   - Description: Should delete the list associated with the specified listId
 
 ## Part 2: Data form
+Build an HTML form that enables form users to add cards and add lists. You can use this form to test your API server.
