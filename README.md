@@ -47,7 +47,12 @@ Responses to requests to your API server should be in JSON format and at minimum
   - Description: Should delete the list associated with the specified listId
 
 To clear things up a bit, consider the following example:
-- Backend datastore may be a JSON file that looks like:
+- Our data in the backend might look like this:
+<table>
+  <th>
+    Lists
+  </th>
+</table>
   ```
     {
       lists: {
@@ -64,7 +69,7 @@ To clear things up a bit, consider the following example:
       }
     }
     ```
-- User sendsd GET `/list/1234`
+- User sends GET `/list/1234`
 - Assuming the request is well-formed, the user receives the following response:
   ```
   {
