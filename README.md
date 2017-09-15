@@ -4,14 +4,14 @@ that has 3 major functional components: Boards, Lists, and Cards. Each Board can
 Each card generally represents an individual task that users can manage. Each list is a group of related tasks. We encourage you to play 
 around with the tool [here](http://www.trello.com). A Board is a something that you might use to organize all of your tasks for one facet of your life. For example, we might have a board for School. In the School board, you might have a list for each class that you are taking. Within each list, you might have cards that represent homework assignments, tests, or projects. 
 
-As a general tip, make sure to comment your code. Feel free to use credible third party libraries or packages. Feel free to add your own spicy features, as long as they don't disturb the core functionality of the API server.
+As a general tip, make sure to comment your code. Feel free to use credible third party libraries or packages. As a bonus, feel free to add your own spicy features, as long as they don't disturb the core functionality of the API server.
 
 There are two parts to this assignment. 
 
 
 ## Part 1: API Server
+First, take a look at the structure for the data we'd like you to assume. You may assume that your entire application deals with one board. Thus, you only need to deal with lists and cards.
 
-First, take a look at the structure for the data we'd like you to assume:
 ### Structure of data
 - Card
   - title: `String`
@@ -24,8 +24,7 @@ First, take a look at the structure for the data we'd like you to assume:
   - id: `Number`
 
 Build an API server that has the following routes. 
-You are free to use any datastore that you prefer (i.e: some database or a json/yaml file etc.). 
-You may assume that there is only one board to work with (you need not worry about associating lists with boards or cards with boards).
+You must store data necessary for this API server in a database. You are free to use any database that you prefer.
 Responses to requests to your API server should be in JSON format and at minimum contain a status code.
 
 - POST `/card`
@@ -76,3 +75,9 @@ To clear things up a bit, consider the following example:
 
 ## Part 2: Data form
 Build an HTML form that enables form users to add cards and add lists. You can use this form to test your API server.
+
+## Part 3: Submitting
+1. Clone this repository
+2. Checkout a branch structured as yourfirstname_yourlastname
+3. Push all of your commits to your branch.
+4. Ask us questions about this process if you feel confused. We'll walk you through it - don't sweat!
