@@ -48,27 +48,65 @@ Responses to requests to your API server should be in JSON format and at minimum
 
 To clear things up a bit, consider the following example:
 - Our data in the backend might look like this:
+
+Lists
 <table>
-  <th>
-    Lists
-  </th>
+  <tr>
+    <th>
+      Id
+    </th>
+    <th>
+      Title
+    </th>
+    <th>
+      Order
+    </th>
+  </tr>
+  <tr>
+    <td>
+      1234
+    </td>
+    <td>
+      "Grocery List"
+    </td>
+    <td>
+      1
+    </td>
+  </tr>
 </table>
-  ```
-    {
-      lists: {
-        "1234": {
-          "title": "Grocery List",
-          "order": 1
-        }
-      }
-      "cards": {
-        "5234": {
-          "title": "Eggs",
-          "description": "Buy many eggs"
-        }
-      }
-    }
-    ```
+
+Cards
+<table>
+  <tr>
+    <th>
+      Id
+    </th>
+    <th>
+      Title
+    </th>
+    <th>
+      Description
+    </th>
+    <th>
+      ListId
+    </th>
+  </tr>
+  <tr>
+    <td>
+      5332
+    </td>
+    <td>
+      "Eggs"
+    </td>
+    <td>
+      "Need to buy a lot of eggs"
+    </td>
+    <td>
+      1234
+    </td>
+  </tr>
+</table>
+
 - User sends GET `/list/1234`
 - Assuming the request is well-formed, the user receives the following response:
   ```
