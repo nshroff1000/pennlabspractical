@@ -53,7 +53,7 @@ Responses to requests to your API server should be in JSON format and at minimum
   </tbody>
 <table>
 
-- *Adding a list*: Should add a list to the database with the given title. The newly added list's order
+- *Adding a list*: Should add a list to the database with the given title. The newly added list's order should be at the end.
 
 <table>
   <tbody>
