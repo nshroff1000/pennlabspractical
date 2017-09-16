@@ -178,7 +178,7 @@ Responses to requests to your API server should be in JSON format and at minimum
   </tbody>
 </table>
 
-- *Delete list by ID*: Should delete the list associated with the specified listId.
+- *Delete list by ID*: Should delete the list associated with the specified listId. Should also delete the cards associated with the list.
 
 <table>
   <tbody>
@@ -338,7 +338,7 @@ To clear things up a bit, consider the following example:
 Build an HTML form that enables form users to add cards and add lists. You can use this form to test your API server. We are not concerned with the aesthetics of the form. We just care that it is functional.
 
 ## Submitting
-1. Clone this repository
-2. Checkout a branch structured as yourfirstname_yourlastname
+1. Clone this repository (or fork this project and clone)
+2. Checkout a branch structured as yourfirstname_yourlastname (not necessary if you forked)
 3. Push all of your commits to your branch.
 4. If you have any questions, confusions, or comments at all, feel SUPER FREE to email us at `niharp@seas.upenn.edu`, `rohanmen@seas.upenn.edu`, or `branlin@seas.upenn.edu`. We're here to help 😁. We'll help you through it - don't sweat!
