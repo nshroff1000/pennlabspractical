@@ -335,7 +335,7 @@ To clear things up a bit, consider the following example:
   </table>
 
 ## Part 2: Data form
-Build an HTML form that enables form users to add cards and add lists. You can use this form to test your API server. We are not concerned with the aesthetics of the form. We just care that it is functional.
+Build an HTML form that enables form users to add, edit, and delete cards and add, edit, and delete lists. The form should also somehow display visually the results of the user input. For the example given above, the form would show the two lists (in the order specified) and the two cards under the first list. You can use this form to test your API server. We are not concerned with the aesthetics of the form. We just care that it is functional.
 
 ## Submitting
 1. Fork this project and clone it to your local machine.
