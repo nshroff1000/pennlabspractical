@@ -1,6 +1,7 @@
-Open the terminal and navigate to the directory with all the files. Make sure mysql is installed.
-Then use the command to run the sql file. Put the username after u and password after p.
-For example, if name is the username and admin is password, then run the command,
+Open the terminal and navigate to the directory with all the files. 
+Make sure mysql is installed.
+Then run the sql file (As shown below) through mysql. 
+Put the username after u and password after p. For example, if 'name' is the username and 'admin' is password, then run the command,
 
 mysql -uname -padmin < createtables.sql;
 
