@@ -1,0 +1,7 @@
+CREATE DATABASE `TRELLO_API`;
+
+USE TRELLO_API;
+
+CREATE TABLE card(ID int NOT NULL AUTO_INCREMENT, Title varchar(255) NOT NULL, Description varchar(255), listID int, PRIMARY KEY (ID));
+
+CREATE TABLE list(ListID int NOT NULL AUTO_INCREMENT, Title varchar(255) NOT NULL, `Order` int NOT NULL, PRIMARY KEY (ListID));
